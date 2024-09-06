@@ -1,0 +1,57 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django Tailwind</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+<header class="fixed top-0 left-0 w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between p-10">
+            <div class="text-2xl font-bold">
+                <a href="#" class="hover:text-gray-200">MonLogo</a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-gray-300">Projets</a>
+                <a href="#" class="hover:text-gray-300">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Section principale  -->
+<div class="container mx-auto h-screen flex items-center justify-center">
+    <section class="flex flex-col md:flex-row gap-32 items-start justify-center text-center md:text-left">
+        <!-- Image -->
+        <div class="w-80 overflow-hidden rounded-xl shadow-lg">
+            <img src="{% static 'clement_marcel_profile.jpg' %}" alt="Clement MARCEL profile">
+        </div>
+
+        <!-- Texte -->
+        <div class="max-w-prose">
+            <h1 class="text-5xl font-semibold">Développeur Fullstack, Python et Typescript️</h1>
+            <p class="mt-4 text-lg font-light leading-relaxed">
+                Développeur passionné par la création de solutions techniques efficaces et robustes. Je m'efforce de
+                combiner une qualité de développement élevée avec des retours rapides. Mon objectif est de contribuer à
+                des projets innovants tout en respectant des standards rigoureux et des délais optimisés.
+            </p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -9,7 +9,8 @@ packages = [{include = "bequeath"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 Django = "^5.1.1"
-django-tailwind = "^3.8.0"
+django-tailwind = {extras = ["reload"], version = "^3.8.0"}
+ruff = "^0.6.3"
 
 
 [build-system]
