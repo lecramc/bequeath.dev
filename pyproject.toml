@@ -1,16 +1,15 @@
 [tool.poetry]
-name = "bequeath-dev"
+name = "bequeath"
 version = "0.1.0"
 description = ""
-authors = ["Clement MARCEL <cmarcel@millesima.com>"]
+authors = ["Clement MARCEL <lecramproject@gmail.com>"]
 readme = "README.md"
-packages = [{include = "bequeath"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 Django = "^5.1.1"
 django-tailwind = {extras = ["reload"], version = "^3.8.0"}
-ruff = "^0.6.3"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

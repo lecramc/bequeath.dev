@@ -33,25 +33,9 @@
     </div>
 </header>
 
-<!-- Section principale  -->
 <div class="container mx-auto h-screen flex items-center justify-center">
-    <section class="flex flex-col md:flex-row gap-32 items-start justify-center text-center md:text-left">
-        <!-- Image -->
-        <div class="w-80 overflow-hidden rounded-xl shadow-lg">
-            <img src="{% static 'clement_marcel_profile.jpg' %}" alt="Clement MARCEL profile">
-        </div>
-
-        <!-- Texte -->
-        <div class="max-w-prose">
-            <h1 class="text-5xl font-semibold">Développeur Fullstack, Python et Typescript️</h1>
-            <p class="mt-4 text-lg font-light leading-relaxed">
-                Développeur passionné par la création de solutions techniques efficaces et robustes. Je m'efforce de
-                combiner une qualité de développement élevée avec des retours rapides. Mon objectif est de contribuer à
-                des projets innovants tout en respectant des standards rigoureux et des délais optimisés.
-            </p>
-        </div>
-    </section>
+   {% include 'portfolio/profile.html' %}
 </div>
-
+{% include 'portfolio/project.html' %}
 </body>
 </html>
