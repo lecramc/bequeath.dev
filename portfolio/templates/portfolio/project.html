@@ -1,6 +1,6 @@
-<section id="projects" class="max-w-7xl mx-auto px-4 py-16">
-      <div class="relative overflow-hidden" style="height: 400px;">
-        <div id="project-container" class="absolute inset-0 flex transition-transform duration-1000 ease-in-out">
+{% load static %}
+<section id="projects" class="flex flex-col md:flex-row gap-32 items-start justify-center text-center md:text-left">
+        <div id="project-container" class="inset-0 flex transition-transform duration-1000 ease-in-out">
             {% for project in projects %}
             <!-- Projet {{ forloop.counter }} -->
             <div class="flex-shrink-0 w-full flex items-center space-x-6" id="project{{ forloop.counter }}">
@@ -12,11 +12,10 @@
                 </div>
                 <div class="w-1/2 flex justify-center">
                     <a href="{{ project.link }}" class="block">
-                        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity">
+                        <img src="{% static  project.image.url %}" alt="{{ project.title }}" class="rounded-lg shadow-lg hover:opacity-90 transition-opacity">
                     </a>
                 </div>
             </div>
             {% endfor %}
         </div>
-    </div>
 </section>

@@ -83,7 +83,6 @@ TEMPLATES = [
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
     BASE_DIR / "portfolio/static",
 ]
 WSGI_APPLICATION = "app.wsgi.application"
