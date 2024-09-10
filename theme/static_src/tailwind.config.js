@@ -43,7 +43,18 @@ module.exports = {
     ],
 
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                'manrope': ['"Manrope"', 'sans-serif'],
+                'roboto': ['"Roboto"', 'sans-serif']
+            },
+            colors: {
+                'bequeath-purple': '#8c52ff',
+                'bequeath-purple-100': '#5e17eb',
+            }, boxShadow: {
+                'purple-back': '10px 10px 10px -5px rgba(94, 23, 235, 0.3)',
+            }
+        },
     },
     plugins: [
         /**

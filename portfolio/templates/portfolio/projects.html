@@ -1,0 +1,20 @@
+<section class="flex flex-col gap-16 md:gap-32 items-center justify-center text-center">
+    <h2 class="text-5xl font-manrope font-bold decoration-bequeath-purple">Projets</h2>
+    <div class="flex flex-wrap justify-center gap-10 py-10">
+        {% for project in projects %}
+            <!-- Projet {{ forloop.counter }} -->
+            <div class="w-80 relative overflow-hidden bg-white rounded-lg shadow-purple-back">
+                <a href="{{ project.link }}" class="block">
+                    {% load static %}
+                    <img src="{% static project.image.url %}" alt="{{ project.title }}"
+                         class="w-full h-64 object-cover transform transition-transform duration-500 rounded-t-lg group-hover:scale-110"
+                         loading="lazy">
+                </a>
+
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-gray-200 bg-opacity-90 rounded-lg p-2">
+                    <h3 class="text-black text-xl font-bold">{{ project.title }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
