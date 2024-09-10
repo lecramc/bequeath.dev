@@ -1,13 +1,12 @@
+{% load static %}
 <section class="flex flex-col h-screen gap-16 pb-20 max-h-screen items-center justify-center text-center md:gap-32  md:text-left">
-
     <h2 class="text-5xl font-manrope font-bold decoration-bequeath-purple">Projets</h2>
     <div class="flex flex-wrap justify-center gap-10">
         {% for project in projects %}
             <!-- Projet {{ forloop.counter }} -->
-            <div class="w-80 relative overflow-hidden bg-white rounded-lg shadow-purple-back">
+            <div class="w-96 relative overflow-hidden bg-white rounded-lg shadow-purple-back">
                 <a href="{{ project.link }}" class="block">
-                    {% load static %}
-                    <img src="{% static project.image.url %}" alt="{{ project.title }}"
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}"
                          class="w-full h-64 object-cover transform transition-transform duration-500 rounded-t-lg group-hover:scale-110"
                          loading="lazy">
                 </a>
