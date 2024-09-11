@@ -8,6 +8,7 @@ x-app: &default-app
   restart: "unless-stopped"
   environment:
     - SECRET_KEY=${SECRET_KEY}
+
 services:
   web:
     <<: *default-app
@@ -16,10 +17,25 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
+    environment:
+      - DATABASE_URL=postgres://postgres_user:postgres_password@db:5432/postgres_db
 
   tailwind:
     <<: *default-app
     command: "python manage.py tailwind start"
-    # Without tty, no stdin, and tailwind watcher aborts
-    # https://github.com/tailwindlabs/tailwindcss/issues/5324
     tty: true
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: postgres_db
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:

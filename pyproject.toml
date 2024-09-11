@@ -11,6 +11,9 @@ Django = "^5.1.1"
 django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 python-dotenv = "^1.0.1"
 pillow = "^10.4.0"
+dj-database-url = "^2.2.0"
+psycopg = {extras = ["binary"], version = "^3.2.1"}
+python-decouple = "^3.8"
 
 
 [build-system]
