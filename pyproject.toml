@@ -4,9 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Clement MARCEL <lecramproject@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "3.12.5"
 Django = "^5.1.1"
 django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 python-dotenv = "^1.0.1"
