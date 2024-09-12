@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'theme',
 
     'portfolio',
+    'blog',
 
     'django_browser_reload'
 ]
@@ -67,8 +68,6 @@ ROOT_URLCONF = "app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

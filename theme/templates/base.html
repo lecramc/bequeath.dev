@@ -1,19 +1,53 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    <title>Django Tailwind</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		{% tailwind_css %}
-	</head>
+<head>
+    <title>Clément MARCEL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% tailwind_css %}
+</head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div>
-	</body>
+<body class="leading-normal tracking-normal font-roboto">
+<header
+        class="sticky max-h-28 top-[-112px] left-0 w-full z-10 bg-white transition-transform duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-28 justify-between items-center p-4">
+            <div class="text-2xl font-bold">
+                <a href="/" class="hover:text-gray-200"><img class="w-10"
+                                                             src="{% static 'bequeath_icon_purple.png' %}"/></a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="{% url 'portfolio:portfolio' %}" class="hover:text-gray-300">portfolio</a>
+                <a href="{% url 'blog:blog' %}" class="hover:text-gray-300">blog</a>
+                <a href="#" class="hover:text-gray-300">contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+
+{% endblock %}
+
+<footer class="sticky w-full max-h-28 h-28 bottom-[-112px]">
+    <div class="flex flex-row justify-between h-full items-center font-semibold p-4">
+        <a href="https://www.linkedin.com/in/clementmarcel/" class="hover:text-gray-300">linkedin</a>
+        <a href="mailto:lecramproject@gmail.com?" class="hover:text-gray-300">contact me</a>
+        <a href="https://github.com/lecramc" class="hover:text-gray-300">github</a>
+    </div>
+
+</footer>
+</body>
 </html>

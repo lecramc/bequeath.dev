@@ -18,12 +18,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-import portfolio
 from app import settings
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('', include("portfolio.urls")),
-    path("__reload__/", include("django_browser_reload.urls")),
+                  path("admin/", admin.site.urls),
+                  path('', include("portfolio.urls")),
+                  path('blog/', include("blog.urls")),
+                  path("__reload__/", include("django_browser_reload.urls")),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
