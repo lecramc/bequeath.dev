@@ -127,7 +127,7 @@ USE_TZ = True
 
 # Storage
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
-print(USE_S3)
+
 if USE_S3:
     # aws settings
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
@@ -144,6 +144,7 @@ if USE_S3:
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'hello_django.storage_backends.PublicMediaStorage'
+    print(STATIC_URL, AWS_S3_CUSTOM_DOMAIN)
 else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
