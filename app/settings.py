@@ -143,10 +143,8 @@ if USE_S3:
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     STORAGES = {
-        "default": {
-            "BACKEND": "storages.backends.s3.S3Storage",
-
-        },
+        "default": {"BACKEND": "app.storage_backends.PublicMediaStorage"},
+        "staticfiles": {"BACKEND": "app.storage_backends.StaticStorage"},
     }
 else:
     STATIC_URL = "static/"
