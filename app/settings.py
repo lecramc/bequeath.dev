@@ -97,7 +97,10 @@ DATABASES = {
     'default': dj_database_url.config(
         default=DATABASE_URL,
         conn_max_age=600,
-    )
+    ) if not DEBUG else {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 }
 
 # Password validation
@@ -122,7 +125,7 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# Static and storage
+# Storage
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
 
 if USE_S3:
