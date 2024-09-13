@@ -145,9 +145,11 @@ if USE_S3:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'app.storage_backends.PublicMediaStorage'
 else:
-    STATIC_URL = '/staticfiles/'
-    MEDIA_URL = '/mediafiles/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+    STATIC_URL = "static/"
+    STATIC_ROOT = "static/"
+
+    MEDIA_ROOT = "media/"
+    MEDIA_URL = "media/
 
 STATICFILES_DIRS = [
     BASE_DIR / "portfolio/static",
