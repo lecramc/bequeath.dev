@@ -149,7 +149,6 @@ else:
 
 STATICFILES_DIRS = [
     BASE_DIR / "portfolio/static",
-    BASE_DIR / "blog/static",
 ]
 
 # Default primary key field type
