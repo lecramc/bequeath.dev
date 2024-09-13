@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'portfolio',
     'blog',
 
-    'django_browser_reload'
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -60,10 +59,13 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+if DEBUG:
+    INSTALLED_APPS += ['django_browser_reload']
+    MIDDLEWARE += ['django_browser_reload.middleware.BrowserReloadMiddleware']
+    
 ROOT_URLCONF = "app.urls"
 
 TEMPLATES = [
