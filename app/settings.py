@@ -127,7 +127,7 @@ USE_TZ = True
 
 # Storage
 USE_S3 = os.getenv('USE_S3') == 'TRUE'
-
+print(USE_S3)
 if USE_S3:
     # aws settings
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
