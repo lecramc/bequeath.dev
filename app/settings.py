@@ -149,7 +149,7 @@ else:
     STATIC_ROOT = "static/"
 
     MEDIA_ROOT = "media/"
-    MEDIA_URL = "media/
+    MEDIA_URL = "media/"
 
 STATICFILES_DIRS = [
     BASE_DIR / "portfolio/static",
