@@ -1,5 +1,5 @@
 #!/bin/sh
-poetry install --no-dev
+poetry install --only main
 python manage.py makemigrations
 python manage.py migrate
 python manage.py tailwind install
