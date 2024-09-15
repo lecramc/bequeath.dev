@@ -53,5 +53,7 @@ class Comment(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     approved = models.BooleanField(default=False)
 
+    verbose_name_plural = 'comments'
+
     def __str__(self):
         return f'Comment by {self.author} on {self.post}'
