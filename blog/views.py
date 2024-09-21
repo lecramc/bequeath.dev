@@ -6,4 +6,5 @@ from blog.models import Post
 # Create your views here.
 def blog_view(request):
     """Blog view"""
-    return render(request, "blog/index.html", posts=Post.objects.all())
+    posts = Post.objects.all()
+    return render(request, "blog/index.html", {"posts": posts})

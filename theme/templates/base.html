@@ -21,7 +21,6 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="{% url 'portfolio:portfolio' %}" class="hover:text-gray-300">portfolio</a>
                 <a href="{% url 'blog:blog' %}" class="hover:text-gray-300">blog</a>
-                <a href="#" class="hover:text-gray-300">contact</a>
             </nav>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-black focus:outline-none">
@@ -42,7 +41,7 @@
 {% endblock %}
 
 <footer class="sticky w-full max-h-28 h-28 bottom-[-112px]">
-    <div class="flex flex-row justify-between h-full items-center font-semibold p-4">
+    <div class="flex flex-row justify-between h-full items-center font-semibold px-4 sm:px-6 lg:px-8">
         <a href="https://www.linkedin.com/in/clementmarcel/" class="hover:text-gray-300">linkedin</a>
         <a href="mailto:lecramproject@gmail.com?" class="hover:text-gray-300">contact me</a>
         <a href="https://github.com/lecramc" class="hover:text-gray-300">github</a>
