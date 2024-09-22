@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container min-h-[calc(100vh-224px)] mx-auto px-4 sm:px-6 lg:px-8">
         {% for post in posts %}
-            <div class="flex flex-col max-w-5xl mx-auto gap-10 md:flex-row md:gap-8">
+            <div class="flex flex-col max-w-5xl mx-auto gap-10 p-4 hover:bg-bequeath-purple hover:bg-opacity-25 hover:rounded-lg md:flex-row md:gap-8">
                 <div class="md:pl-8">
                     <h2 class="text-2xl font-bold">{{ post.title }}</h2>
                     <p class="text-lg font-light">{{ post.content|truncatechars:200 }}</p>

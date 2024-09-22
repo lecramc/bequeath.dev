@@ -3,8 +3,6 @@ x-app: &default-app
     context: "."
   volumes:
     - .:/app
-  depends_on:
-    - db
   restart: "unless-stopped"
   environment:
     - SECRET_KEY=${SECRET_KEY}
@@ -12,10 +10,11 @@ x-app: &default-app
 services:
   web:
     <<: *default-app
-    command: "python manage.py runserver 0.0.0.0:8000"
-
+    command: "./entrypoint-dev.sh"
     ports:
       - "8000:8000"
+    depends_on:
+      - db
     volumes:
       - .:/app
   tailwind:

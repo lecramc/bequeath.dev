@@ -33,8 +33,3 @@ COPY . .
 
 WORKDIR /app
 
-RUN SECRET_KEY=${SECRET_KEY} python manage.py tailwind install --no-input;
-RUN SECRET_KEY=${SECRET_KEY} python manage.py tailwind build --no-input;
-RUN SECRET_KEY=${SECRET_KEY} python manage.py collectstatic --no-input;
-
-CMD ["python", "manage.py", "runserver"]

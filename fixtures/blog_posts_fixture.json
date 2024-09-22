@@ -1,0 +1,86 @@
+[
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "La réussite",
+      "slug": "la-reussite",
+      "content": "👶 À 17 ans je lançais ma marque de vêtements. Aujourd’hui j’ai 25 ans et je suis toujours en alternance. J’ai toujours voulu entreprendre et j’adorais le streetwear...",
+      "image": "",
+      "created_at": "2024-09-21T15:44:25Z",
+      "updated_at": "2024-09-21T15:45:40.562472Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Égocentrisme",
+      "slug": "egocentrisme",
+      "content": "Hier j’ai eu un oral scolaire, un évaluateur professionnel et moi en tant qu'évalué. Dans mon cas, je suis professionnel aussi, plus de 4 ans que je suis en alternance...",
+      "image": "",
+      "created_at": "2024-09-21T15:45:42Z",
+      "updated_at": "2024-09-21T15:46:03.942567Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "title": "Développeur",
+      "slug": "developpeur",
+      "content": "Les métiers sont bien trop mal compris, mais cela parait pourtant simple. Faire un logiciel, une application, tout coule de source non ?...",
+      "image": "",
+      "created_at": "2024-09-21T15:46:05Z",
+      "updated_at": "2024-09-21T15:46:34.357372Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+      "title": "Vie",
+      "slug": "vie",
+      "content": "💪🏼 Travail. 6 ans d’études supérieures en alternance. Je viens de terminer mon 3ème diplôme, tout ça pour n’avoir qu’un bac +3/4 équivalent master 1...",
+      "image": "",
+      "created_at": "2024-09-21T15:46:36Z",
+      "updated_at": "2024-09-21T15:49:17.927109Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+      "title": "Choisir",
+      "slug": "choisir",
+      "content": "Dans la vie il faut faire des choix, demain n'est que le résultat de nos actions du jour...",
+      "image": "",
+      "created_at": "2024-09-21T15:47:00Z",
+      "updated_at": "2024-09-21T15:47:23.533911Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+      "title": "Alternance",
+      "slug": "alternance",
+      "content": "Je suis un amoureux de l’alternance, entamer sa septième année d’alternance peut paraître absurde à 25 ans...",
+      "image": "",
+      "created_at": "2024-09-21T15:48:06Z",
+      "updated_at": "2024-09-21T15:49:41.768738Z",
+      "is_published": false,
+      "author_id": 1
+    }
+  }
+]
