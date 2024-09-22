@@ -19,8 +19,8 @@
                                                              src="{% static 'bequeath_icon_purple.png' %}"/></a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="{% url 'portfolio:portfolio' %}" class="hover:text-gray-300">portfolio</a>
-                <a href="{% url 'blog:blog' %}" class="hover:text-gray-300">blog</a>
+                <a href="{% url 'portfolio:portfolio' %}" class="hover:text-bequeath-purple {% if request.path == '/' %}text-bequeath-purple{% endif %}">portfolio</a>
+                <a href="{% url 'blog:blog' %}" class="hover:text-bequeath-purple {% if request.path == '/blog/' %}text-bequeath-purple{% endif %}">blog</a>
             </nav>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-black focus:outline-none">
