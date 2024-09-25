@@ -6,7 +6,7 @@ from blog.models import Post
 # Create your views here.
 def blog_view(request):
     """Blog view"""
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by("created_at").reverse()
     return render(request, "blog/index.html", {"posts": posts})
 
 def post_view(request, pk):
