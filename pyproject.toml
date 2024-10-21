@@ -19,6 +19,7 @@ gunicorn = "^23.0.0"
 django-storages = "^1.14.4"
 boto3 = "^1.35.18"
 django-extensions = "^3.2.3"
+ruff = "^0.7.0"
 
 
 [build-system]
