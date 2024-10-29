@@ -4,7 +4,7 @@
     <div class="flex flex-wrap justify-center gap-10">
         {% for project in projects %}
             <!-- Projet {{ forloop.counter }} -->
-            <div class="w-96 relative overflow-hidden bg-white rounded-lg shadow-purple-back">
+            <div class="w-96 relative overflow-hidden bg-white rounded-lg shadow-purple-back hover:transform hover:-translate-y-1 hover:shadow-[10px_10px_10px_-5px_rgba(94,23,235,0.3)]" >
                 <a href="{{ project.link }}" class="block">
                     <img src="{{ project.image.url }}" alt="{{ project.title }}"
                          class="w-full h-64 object-cover transform transition-transform duration-500 rounded-t-lg group-hover:scale-110"
