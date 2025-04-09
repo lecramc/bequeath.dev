@@ -1,0 +1,29 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Labeler
+on: [pull_request_target]
+
+jobs:
+  create_or_update_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create or Update Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --title "Release ${{ github.ref_name }}" \
+            --notes "This release corresponds to tag ${{ github.ref_name }}" \
+            --target main \
+            --prerelease=false || \
+          gh release edit "${{ github.ref_name }}" \
+            --title "Release ${{ github.ref_name }}" \
+            --notes "This release corresponds to tag ${{ github.ref_name }}"
